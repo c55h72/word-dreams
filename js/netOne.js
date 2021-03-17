@@ -115,7 +115,7 @@ if(zCo < .07){
 }
 		if(-100 < mouseEX && mouseEX < 100 && -100 < mouseWHY && mouseWHY < 100){
 			if(mouseIsPressed){
-				window.location.href = 'netThree.html';
+				window.location.href = 'netTwo.html';
 
 			}
 		}
