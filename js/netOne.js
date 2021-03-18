@@ -63,7 +63,7 @@ function draw(){
 
 	print(zCo);
 
-		if(keyIsDown(UP_ARROW)){
+		if(keyIsDown(UP_ARROW) || keyIsDown(87)){
 			zCo-=0.001
 			bgShade-=1;
 				osc = new p5.Oscillator();
@@ -73,7 +73,7 @@ function draw(){
 				osc.start();
 		}
 
-		if(keyIsDown(DOWN_ARROW)){
+		if(keyIsDown(DOWN_ARROW) || keyIsDown(83)){
 			zCo+=0.001
 			bgShade+=1;
 				osc = new p5.Oscillator();
@@ -83,14 +83,14 @@ function draw(){
 				osc.start();
 		}
 
-		if(keyIsDown(RIGHT_ARROW)){
+		if(keyIsDown(RIGHT_ARROW) || keyIsDown(68)){
 			camX+=1;
 
 			if(camX===1200){
 				camX=-1200;
 			}
 		}
-		if(keyIsDown(LEFT_ARROW)){
+		if(keyIsDown(LEFT_ARROW) || keyIsDown(65)){
 			camX-=1;
 
 			if(camX===-1200){
