@@ -26,7 +26,7 @@ function setup(){
 function drawLine(x1, y1, z1, x2,y2, z2){
   beginShape();
   vertex(x1,y1,z1);
-  vertex(x2,y2,z2);  
+  vertex(x2,y2,z2);
   endShape();
 }
 
@@ -36,9 +36,9 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 
 	print(oscHz);
 
-	
+
 	stroke(255, 0, 0);
-	
+
 	var x = random(-windowWidth/2, windowWidth/2);
 	var y = random(-windowHeight/2, 0);
 	drawLine(-windowWidth/2, 0, 0, x, -y, 0);
@@ -55,7 +55,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 	background(255);
 	}
 
-		if(keyIsDown(UP_ARROW)){			
+		if(keyIsDown(UP_ARROW)){
 			zCo-=0.001;
 			if(oscHz > 80){
 			osc.amp(0.3, 2);
@@ -63,7 +63,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 				osc.freq(oscHz);
 			}
 		}
-		
+
 		if(keyIsDown(DOWN_ARROW)){
 			zCo+=0.001;
 			if(oscHz < 550){
@@ -97,4 +97,3 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 			}
 		}
 }
-

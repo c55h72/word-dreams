@@ -18,7 +18,7 @@ let textOne;
 function setup(){
 	createCanvas(windowWidth, windowHeight, WEBGL);
 
-	  img = loadImage('rgb.png');
+	img = loadImage('rgb.png');
 
 	osc = new p5.Oscillator();
 	osc.setType('sine');
@@ -36,15 +36,6 @@ function setup(){
 	wordObjectTwo = new Word3D( '                                                                                                                                                                                  am (?)', 0.5, 0.5, 30, false);
 	wordObjectThree = new Word3D( 'is (?) (it)                                                                                                                                                         ', 0.5, 0.5, 30, false);
 
-
-}
-
-function drawLine(x1, y1, z1, x2,y2, z2){
-stroke(0, 255, 0);
-  beginShape();
-  vertex(x1,y1,z1);
-  vertex(x2,y2,z2);  
-  endShape();
 }
 
 function draw(){
@@ -54,11 +45,10 @@ function draw(){
 	 // pop();
 	let mouseEX = map(mouseX, 0, windowWidth, -windowWidth/2, windowWidth/2);
 	let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
-	
-wordObjectOne.show()
-wordObjectTwo.show()
-wordObjectThree.show()
 
+	wordObjectOne.show()
+	wordObjectTwo.show()
+	wordObjectThree.show()
 
 	stroke(0, 255, 0);
 	var x = random(-windowWidth/2, windowWidth/2);
@@ -69,29 +59,28 @@ wordObjectThree.show()
 
 		if(frameCount % 20 == 0){
 	background(bgShade);
-
 	}
 
-print(zCo);
+	print(zCo);
 
-		if(keyIsDown(UP_ARROW)){			
+		if(keyIsDown(UP_ARROW)){
 			zCo-=0.001
 			bgShade-=1;
 				osc = new p5.Oscillator();
-	osc.setType('sine');
-	osc.freq(oscHz);
-	osc.amp(.03);
-	osc.start();
+				osc.setType('sine');
+				osc.freq(oscHz);
+				osc.amp(.03);
+				osc.start();
 		}
-		
+
 		if(keyIsDown(DOWN_ARROW)){
 			zCo+=0.001
 			bgShade+=1;
 				osc = new p5.Oscillator();
-	osc.setType('sine');
-	osc.freq(oscHz);
-	osc.amp(.03);
-	osc.start();
+				osc.setType('sine');
+				osc.freq(oscHz);
+				osc.amp(.03);
+				osc.start();
 		}
 
 		if(keyIsDown(RIGHT_ARROW)){
@@ -122,3 +111,10 @@ if(zCo < .07){
 
 }
 
+function drawLine(x1, y1, z1, x2,y2, z2){
+	stroke(0, 255, 0);
+  beginShape();
+  vertex(x1,y1,z1);
+  vertex(x2,y2,z2);
+  endShape();
+}
