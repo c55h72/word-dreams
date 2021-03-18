@@ -55,7 +55,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 	background(255);
 	}
 
-		if(keyIsDown(UP_ARROW)){
+		if(keyIsDown(UP_ARROW) || keyIsDown(87)){
 			zCo-=0.001;
 			if(oscHz > 80){
 			osc.amp(0.3, 2);
@@ -64,7 +64,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 			}
 		}
 
-		if(keyIsDown(DOWN_ARROW)){
+		if(keyIsDown(DOWN_ARROW) || keyIsDown(83)){
 			zCo+=0.001;
 			if(oscHz < 550){
 			oscHz += .1;
@@ -73,7 +73,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 
 		}
 
-		if(keyIsDown(RIGHT_ARROW)){
+		if(keyIsDown(RIGHT_ARROW) || keyIsDown(68)){
 			camX+=1;
 	oscHz -= .1;
 				osc.freq(oscHz);
@@ -82,7 +82,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 				camX=-1200;
 			}
 		}
-		if(keyIsDown(LEFT_ARROW)){
+		if(keyIsDown(LEFT_ARROW) || || keyIsDown(65)){
 			camX-=1;
 	oscHz += .1;
 				osc.freq(oscHz);
