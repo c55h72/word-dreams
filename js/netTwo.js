@@ -82,7 +82,7 @@ let mouseWHY = map(mouseY, 0, windowHeight, -windowHeight/2, windowHeight/2);
 				camX=-1200;
 			}
 		}
-		if(keyIsDown(LEFT_ARROW) || || keyIsDown(65)){
+		if(keyIsDown(LEFT_ARROW) || keyIsDown(65)){
 			camX-=1;
 	oscHz += .1;
 				osc.freq(oscHz);
