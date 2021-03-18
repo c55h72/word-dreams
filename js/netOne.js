@@ -63,7 +63,7 @@ function draw(){
 
 	print(zCo);
 
-		if(keyIsDown(87)){
+		if(keyIsDown(UP_ARROW) || keyIsDown(87)){
 			zCo-=0.001
 			bgShade-=1;
 				osc = new p5.Oscillator();
