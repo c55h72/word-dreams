@@ -1,4 +1,5 @@
 # word dreams
+
 short form internet book made with p5.js and a-frame
 
 arrow keys, click in the middle to change the page
@@ -8,6 +9,3 @@ arrow keys, click in the middle to change the page
 *FLASHING/LIGHT SOUND WARNING*
 
 ![screenshot](/vector1.png)
-
-
-
